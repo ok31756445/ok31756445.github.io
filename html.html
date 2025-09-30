@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>我的網站 — 範例一頁式</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="一個簡潔的範例一頁式網站：英雄區、關於、作品集、聯絡表單。" />
+  <link rel="icon" href="data:,"> <!-- 替換成你的 favicon 檔案 -->
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="#">MySite</a>
+      <nav class="nav">
+        <a href="#home">首頁</a>
+        <a href="#about">關於</a>
+        <a href="#portfolio">作品</a>
+        <a href="#contact">聯絡</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="open menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <h1>嗨，我是 <span class="accent">你的名字</span></h1>
+        <p class="lead">這是一個簡潔的範例網站。你可以放簡介、作品連結，或用作個人作品集/小商家頁面。</p>
+        <div class="hero-cta">
+          <a class="btn" href="#portfolio">查看作品</a>
+          <a class="btn ghost" href="#contact">聯絡我</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2>關於我</h2>
+        <p>簡短介紹：你可以寫學歷、技能、或服務項目。示例：前端開發、UI 設計、攝影。</p>
+        <div class="cards">
+          <div class="card">
+            <h3>服務 A</h3>
+            <p>服務簡述或特色。</p>
+          </div>
+          <div class="card">
+            <h3>服務 B</h3>
+            <p>服務簡述或特色。</p>
+          </div>
+          <div class="card">
+            <h3>服務 C</h3>
+            <p>服務簡述或特色。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="section light">
+      <div class="container">
+        <h2>作品集</h2>
+        <p>以下為範例項目，請替換成你的作品縮圖與說明。</p>
+        <div class="grid">
+          <figure class="work">
+            <img src="https://via.placeholder.com/600x400?text=Work+1" alt="作品 1" />
+            <figcaption>作品 1 — 簡短描述</figcaption>
+          </figure>
+          <figure class="work">
+            <img src="https://via.placeholder.com/600x400?text=Work+2" alt="作品 2" />
+            <figcaption>作品 2 — 簡短描述</figcaption>
+          </figure>
+          <figure class="work">
+            <img src="https://via.placeholder.com/600x400?text=Work+3" alt="作品 3" />
+            <figcaption>作品 3 — 簡短描述</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container narrow">
+        <h2>聯絡我</h2>
+        <p>填表或直接發 email 到 <a href="mailto:someone@example.com">someone@example.com</a></p>
+
+        <form id="contactForm" action="https://formspree.io/f/your-form-id" method="POST">
+          <!-- 替換 action 為你的 Formspree ID 或其他後端 API -->
+          <label>
+            名稱
+            <input type="text" name="name" id="name" required />
+          </label>
+
+          <label>
+            電子郵件
+            <input type="email" name="email" id="email" required />
+          </label>
+
+          <label>
+            訊息
+            <textarea name="message" id="message" rows="5" required></textarea>
+          </label>
+
+          <div class="form-actions">
+            <button class="btn" type="submit">傳送</button>
+            <button class="btn ghost" type="reset">清除</button>
+          </div>
+
+          <p id="formStatus" class="form-status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> 你的名字。Made with ♥</p>
+      <div class="small-links">
+        <a href="#">隱私權</a> · <a href="#">使用條款</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
